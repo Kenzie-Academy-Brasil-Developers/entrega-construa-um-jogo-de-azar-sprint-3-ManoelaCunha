@@ -21,7 +21,6 @@ const pedra_btn = document.getElementById("pedra");
 pedra_btn.addEventListener("click", function (){
     document.querySelector(".computador__escolha").innerHTML = "";
     imgPedra.style.backgroundColor = 'cornflowerblue';
-    imgPedra.style.borderColor = 'cornflowerblue';
     imgPapel.style.backgroundColor = '';
     imgTesoura.style.backgroundColor = '';
     imgPapel.style.borderColor = '';
@@ -33,7 +32,6 @@ const papel_btn = document.getElementById("papel");
 papel_btn.addEventListener("click", function (){
     document.querySelector(".computador__escolha").innerHTML = "";
     imgPapel.style.backgroundColor = 'cornflowerblue';
-    imgPapel.style.borderColor = 'cornflowerblue';
     imgPedra.style.backgroundColor = '';
     imgTesoura.style.backgroundColor = '';
     imgPedra.style.borderColor = '';
@@ -44,8 +42,7 @@ papel_btn.addEventListener("click", function (){
 const tesoura_btn = document.getElementById("tesoura");
 tesoura_btn.addEventListener("click", function(){
     document.querySelector(".computador__escolha").innerHTML = "";
-    imgTesoura.style.backgroundColor = 'cornflowerblue'
-    imgTesoura.style.borderColor = 'cornflowerblue';
+    imgTesoura.style.backgroundColor = 'cornflowerblue';
     imgPapel.style.backgroundColor = '';
     imgPedra.style.backgroundColor = '';
     imgPapel.style.borderColor = '';
@@ -53,6 +50,9 @@ tesoura_btn.addEventListener("click", function(){
     jogadaAtual();
 });
 
+
+let countJogador = 0;
+let countComputador = 0;
 
 function jogadaAtual() {
 
@@ -72,7 +72,9 @@ function jogadaAtual() {
     }
 
     const result = document.getElementById("result__text");
-
+    const pointsJogador = document.querySelector('.jogador__contagem');
+    const pointsComputador = document.querySelector('.computador__contagem');
+  
     if ((pedra_btn.checked === true && computador === 0) ||
         (papel_btn.checked === true && computador === 1) ||
         (tesoura_btn.checked === true && computador === 2)) {
@@ -85,19 +87,23 @@ function jogadaAtual() {
         (tesoura_btn.checked === true && computador === 1)) {
         result.innerText = "Parabéns! Você Venceu!";
         result.style.backgroundColor = 'darkseagreen';
+        countJogador ++;  
+        pointsJogador.innerText = countJogador;  
     } 
     
     if ((pedra_btn.checked === true && computador === 1) ||
         (papel_btn.checked === true && computador === 2) ||
         (tesoura_btn.checked === true && computador === 0)) {
         result.innerText = "Você Perdeu! Tente outra vez!";
-        result.style.backgroundColor = 'tomato';
+        result.style.backgroundColor = 'coral';
+        countComputador ++;
+        pointsComputador.innerText = countComputador;
     }
 }
 
 
-const reset = document.getElementById("reset");
-reset.addEventListener("click", function () {
+const resetJogo = document.getElementById("reset__jogo");
+resetJogo.addEventListener("click", function () {
     imgPedra.style.backgroundColor = '';
     imgPapel.style.backgroundColor = '';
     imgTesoura.style.backgroundColor = '';
@@ -107,4 +113,12 @@ reset.addEventListener("click", function () {
     document.querySelector(".computador__escolha").innerHTML = "";
     document.getElementById("result__text").innerText = "";
     document.getElementById("result__text").style.backgroundColor = '';
+});
+
+const resetPoints = document.getElementById("reset__points");
+resetPoints.addEventListener("click", function () {
+    document.querySelector('.jogador__contagem').innerText = 0;
+    document.querySelector('.computador__contagem').innerText = 0;
+    countJogador = 0;
+    countComputador = 0;
 });
