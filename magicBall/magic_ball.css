@@ -1,15 +1,28 @@
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap');
 
-html, body, header, section, div, p, h1, h2, h4{
+/* VARIÁVEIS */
+:root{
+    --color-white: #FFFFFF;
+    --color-whitesmoke: whitesmoke;
+    --color-cornflowerblue: cornflowerblue;
+    --color-dark-blue: rgb(2, 2, 129);
+    --color-lightgray: lightgray;
+    --color-black: #000000;
+}
+
+/* GERAL */
+html, body, header, article, section, div, p, h1, h2{
     margin: 0;
     padding: 0;
     border: 0;
 }
 
+/* INICIAL */
 header{
     padding: 5px;
-    background-color: cornflowerblue;
+    background-color: var(--color-cornflowerblue);
 }
 
 .nav__container{
@@ -31,15 +44,15 @@ header{
 }
 
 .nav__menu__link{
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'DM+Sans', sans-serif;
     padding: 0px 10px;
-    color: black;
+    color: var(--color-black);
     text-decoration: none;
 }
 
 .nav__menu__link:hover{
-    color: whitesmoke;
+    color: var(--color-whitesmoke);
 }
 
 #btn__menu:checked~.nav__menu{
@@ -59,15 +72,15 @@ h2 {
     font-size: 35px;
     font-weight: 400;
     text-align: center;
-    margin: 15px;
+    margin: 20px;
 }
 
 h3 {
-    font-family: 'Teko', sans-serif;
+    font-family:  'Teko', sans-serif;
     font-size: 25px;
     font-weight: 200;
     text-align: center;
-    margin: 15px;
+    margin: 20px;
 }
 
 #container {
@@ -86,7 +99,7 @@ h3 {
     font-size: 14px;
     font-weight: lighter;
     text-align: center;
-    color: white;
+    color: var(--color-whitesmoke);
     position: absolute;
     left: 50%;
     top: 38%;
@@ -103,21 +116,21 @@ h3 {
     height: 30px;
     border: none;
     border-radius: 2px;
-    background-color: lightgray;
+    background-color: var(--color-lightgray);
     font-family: 'DM+Sans', sans-serif;
 }
 
 #button:hover {
-    background-color: rgb(2, 2, 129);
+    background-color: var(--color-dark-blue);
     border-radius: 2px;
-    color: white;
+    color: var(--color-whitesmoke);
     cursor: pointer;
 }
 
 #reset:hover {
-    background-color: rgb(2, 2, 129);
+    background-color: var(--color-dark-blue);
     border-radius: 2px;
-    color: white;
+    color: var(--color-whitesmoke);
     cursor: pointer;
 }
 

@@ -18,7 +18,7 @@
             </label>
 
             <nav class="nav__menu">
-                <a href="../index.html" class="nav__menu__link">Voltar</a>
+                <a href="../index.html" class="nav__menu__link">Pagina Inicial</a>
             </nav>
         </div>
         
@@ -27,6 +27,9 @@
 
     <article class="jogo">
         <section class="jogador">
+
+            <span class="jogador__contagem">0</span>
+ 
             <h2>Jogador</h2> 
 
             <div class="jogador__escolha">
@@ -42,19 +45,27 @@
 
             </div>
 
-            <h4>FAÇA SUA ESCOLHA</h4>
         </section>
 
         <section class="result">
+
             <p id="result__text"></p>
-    
-            <button id="reset" type="reset">RESET</button>
+
+            <div class="result__btn">
+                <button id="reset__jogo" type="reset">Play Again</button>
+                <button id="reset__points" type="reset">Reset Points</button>
+            </div>
+
         </section>
 
         <section class="computador">
+
+            <span class="computador__contagem">0</span>
+
             <h2>Computador</h2>
 
             <div class="computador__escolha"></div>
+
         </section>
     </article>
 
