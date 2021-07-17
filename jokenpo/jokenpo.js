@@ -1,18 +1,18 @@
 const labelPedra = document.getElementById("img__pedra");
 const imgPedra = document.createElement("img");
-imgPedra.src = "/img/pedra-left.png";
+imgPedra.src = "../img/pedra-left.png";
 imgPedra.classList.add("pedra");
 labelPedra.appendChild(imgPedra);
 
 const labelPapel = document.getElementById("img__papel");
 const imgPapel = document.createElement("img");
-imgPapel.src = "/img/papel-left.png";
+imgPapel.src = "../img/papel-left.png";
 imgPapel.classList.add("papel");
 labelPapel.appendChild(imgPapel);
 
 const labelTesoura = document.getElementById("img__tesoura");
 const imgTesoura = document.createElement("img");
-imgTesoura.src = "/img/tesoura-left.png";
+imgTesoura.src = "../img/tesoura-left.png";
 imgTesoura.classList.add("tesoura");
 labelTesoura.appendChild(imgTesoura);
 
@@ -63,11 +63,11 @@ function jogadaAtual() {
     computadorEscolha.appendChild(imgComputador);
 
     switch (computador) {
-        case 0: imgComputador.src = "/img/pedra-right.png";
+        case 0: imgComputador.src = "../img/pedra-right.png";
             break;
-        case 1: imgComputador.src = "/img/papel-right.png";
+        case 1: imgComputador.src = "../img/papel-right.png";
             break;
-        case 2: imgComputador.src = "/img/tesoura-right.png";
+        case 2: imgComputador.src = "../img/tesoura-right.png";
             break;
     }
 
