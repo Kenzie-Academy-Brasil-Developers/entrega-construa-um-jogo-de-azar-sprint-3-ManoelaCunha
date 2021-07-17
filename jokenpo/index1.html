@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/jokenpo/jokenpo.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Jo-ken-pô</title>
+</head>
+<body>
+    <header>
+        <div class="nav__container">
+            <input type="checkbox" id="btn__menu">
+            <label id="icone" for="btn__menu">
+                <i class="fas fa-angle-right"></i>
+            </label>
+
+            <nav class="nav__menu">
+                <a href="/index.html" class="nav__menu__link">Voltar</a>
+            </nav>
+        </div>
+        
+        <h1>Jo-ken-pô!</h1>
+    </header>
+
+    <article class="jogo">
+        <section class="jogador">
+            <h2>Jogador</h2> 
+
+            <div class="jogador__escolha">
+
+                <input type="radio" name="jogo" id="pedra" />
+                <label id="img__pedra" for="pedra"></label>
+                
+                <input type="radio" name="jogo" id="papel" />
+                <label id="img__papel" for="papel"></label>
+                
+                <input type="radio" name="jogo" id="tesoura" />
+                <label id="img__tesoura" for="tesoura"></label> 
+
+            </div>
+
+            <h4>FAÇA SUA ESCOLHA</h4>
+        </section>
+
+        <section class="result">
+            <p id="result__text"></p>
+    
+            <button id="reset" type="reset">RESET</button>
+        </section>
+
+        <section class="computador">
+            <h2>Computador</h2>
+
+            <div class="computador__escolha"></div>
+        </section>
+    </article>
+
+    <script src="/jokenpo/jokenpo.js"></script>
+</body>
+</html>

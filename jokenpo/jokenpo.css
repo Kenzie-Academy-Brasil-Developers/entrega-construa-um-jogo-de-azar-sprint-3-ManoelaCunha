@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap');
+
+html, body, header, section, div, p, h1, h2, h4{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header{
+    padding: 5px;
+    background-color: cornflowerblue;
+}
+
+.nav__container{
+    display: flex;
+    align-items: center;
+}
+
+#btn__menu{
+    display: none;
+}
+
+#icone{
+    border: none;
+    font-size: 2rem;
+}
+
+.nav__menu{
+    display: none;
+}
+
+.nav__menu__link{
+    font-size: 18px;
+    font-family: 'DM+Sans', sans-serif;
+    padding: 0px 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav__menu__link:hover{
+    color: whitesmoke;
+}
+
+#btn__menu:checked~.nav__menu{
+    display: block;
+}
+
+h1{
+    font-family: 'Teko', sans-serif;
+    font-size: 43px;
+    font-weight: 500;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Teko', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin: 10px;
+    text-align: center;
+}
+
+h4{
+    font-family: 'DM+Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px;
+    text-align: center; 
+}
+
+.jogo{
+    margin: 10px 5px;
+}
+
+.jogador{
+    width: 100%;
+    margin: 0 auto;
+    height: 180px;
+    border-radius: 2px;
+    background-color: thistle;
+}
+
+.jogador__escolha{
+    display: flex;
+    justify-content: space-around;
+}
+
+img{
+    width: 95px;
+    height: 65px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#pedra, #papel, #tesoura{
+    display: none;
+}
+
+#img__pedra:hover > img{
+    cursor: pointer;
+    background-color: cornflowerblue;
+}
+
+#img__papel:hover > img{
+    cursor: pointer;
+    background-color: cornflowerblue;
+}
+
+#img__tesoura:hover > img{
+    cursor: pointer;
+    background-color: cornflowerblue;
+}
+
+.computador{
+    width: 100%;
+    margin: 0 auto;
+    height: 180px;
+    border-radius: 2px;
+    background-color: thistle;
+}
+
+.computador__escolha{
+    display: flex;
+    justify-content: center;
+}
+
+.computador__escolha img{
+    background-color: cornflowerblue;
+}
+
+.result{
+    text-align: center;
+}
+
+#result__text{
+    font-family: 'DM+Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 15px;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 2px;
+}
+
+#reset{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    background-color: lightgray;
+    font-family: 'DM+Sans', sans-serif;
+}
+
+#reset:hover{
+    background-color: rgb(2, 2, 129);
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 400px){
+   
+
+    .jogador{
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    .computador{
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    #result__text{
+        max-width: 355px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 800px){
+
+    .nav__container{
+        position: absolute;
+    }
+    
+    .nav__menu{
+        display: block;
+    }
+
+    #btn__menu:checked~.nav__menu{
+        display: none;
+    }
+
+    h1{
+        font-size: 60px;
+    }
+
+    .jogo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .jogador{
+        margin: 0;
+    }
+
+    .computador{
+        margin: 0;
+    }
+
+    #result__text{
+        width: 195px;
+    }
+}
