@@ -1,9 +1,10 @@
 function jogadaAtual(){
 
     const random = Math.floor(Math.random() * 20 + 1);
-
+    
     const result = document.getElementById("result");
     const answers = document.createElement('p');
+    answers.classList.add('result__text');
     result.appendChild(answers);
 
     switch (random) {
@@ -47,13 +48,36 @@ function jogadaAtual(){
             break;
         case 20: answers.innerText = "Muito duvidoso.";
             break;
-    }
-}
+    };
+};
+
+function textColor(){
+
+    const randomColor = Math.floor(Math.random() * 6 + 1);
+
+    const answers = document.querySelector('.result__text');
+
+    switch (randomColor) {
+        case 1: answers.style.color = 'red';
+            break;
+        case 2: answers.style.color = 'yellow';
+            break;
+        case 3: answers.style.color = 'cyan';
+            break;
+        case 4: answers.style.color = 'chartreuse';
+            break;
+        case 5: answers.style.color = 'hotpink';
+            break;
+        case 6: answers.style.color = 'orange';
+            break;
+    };
+};
 
 const button = document.getElementById("button");
 button.addEventListener("click", function () {
     document.getElementById("result").innerText = "";
-    jogadaAtual();
+    jogadaAtual(); 
+    textColor();
 });
 
 const reset = document.getElementById("reset");
