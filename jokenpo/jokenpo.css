@@ -159,6 +159,7 @@ img{
 }
 
 .result{
+    width: 100%;
     text-align: center;
 }
 
@@ -250,8 +251,12 @@ img{
         margin: 0;
     }
 
+    .result{
+        width: 320px;
+    }
+
     #result__text{
-        width: 205px;
+        width: 300px;
     }
 
     .result__btn{
